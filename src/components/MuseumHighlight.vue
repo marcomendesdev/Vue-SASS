@@ -5,7 +5,7 @@
       <div
         :class="{
           'museum-highlight__highlights': highlight.description,
-          'museum-highlight__highlights--info': highlight.info
+          'museum-highlight__highlights__info': highlight.info
         }"
         v-for="highlight in museumHighlights"
         :key="highlight.name"
@@ -76,8 +76,7 @@ export default {
   &__highlights {
     position: relative;
     background-color: #fff;
-    max-height: 300px;
-
+    max-height: 310px;
     min-width: 300px;
     padding: 0px;
     margin: 10px;
@@ -157,10 +156,11 @@ export default {
     }
   }
 
-  &__highlights--info {
+  &__highlights__info {
     @extend .museum-highlight__highlights;
     background-color: #440b74;
     color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
 
     &__badge {
       @extend .museum-highlight__highlights__badge;
